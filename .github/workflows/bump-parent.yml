@@ -1,5 +1,9 @@
 name: Bump parent submodule pointer
 
+concurrency:
+  group: bump-backend-platform
+  cancel-in-progress: false
+
 on:
   push:
     branches: [main]
@@ -44,4 +48,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PARENT_PAT }}
         run: |
-          gh pr merge "${{ steps.pr.outputs.pull-request-number }}"             --repo "Dinidu21/backend-platform"             --squash             --admin
+          gh pr merge "${{ steps.pr.outputs.pull-request-url }}" \
+  --squash \
+  --admin
