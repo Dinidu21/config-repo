@@ -4,3 +4,22 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates: [Path=/api/users/**]
+          filters:
+            - StripPrefix=2
+        - id: event-booking-service
+          uri: lb://event-booking-service
+          predicates: [Path=/api/events/**]
+          filters:
+            - StripPrefix=2
+        - id: review-notification-service
+          uri: lb://review-notification-service
+          predicates: [Path=/api/reviews/**]
+          filters:
+            - StripPrefix=2
