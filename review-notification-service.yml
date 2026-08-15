@@ -1,10 +1,19 @@
 server:
   port: 8083
+
 spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/reviewdb
-      database: reviewdb
+  cloud:
+    gcp:
+      project-id: eventsphere-504909
+      firestore:
+        project-id: eventsphere-504909
+      storage:
+        project-id: eventsphere-504909
+
+app:
+  gcs:
+    bucket-name: eventsphere-504909-media
+
 eureka:
   client:
     service-url:
