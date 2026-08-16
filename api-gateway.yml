@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server.eventsphere.internal:8761/eureka/
+      defaultZone: http://eureka-server-1.eventsphere.internal:8761/eureka/,http://eureka-server-2.eventsphere.internal:8761/eureka/
 
 spring:
   cloud:
