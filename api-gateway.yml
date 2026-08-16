@@ -52,7 +52,7 @@ spring:
               predicates:
                 - Path=/api/reviews/**
               filters:
-                - StripPrefix=2
+                - StripPrefix=1
 
 management:
   endpoints:
