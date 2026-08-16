@@ -1,3 +1,11 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server.eventsphere.internal:8761/eureka/
+
 spring:
   cloud:
     gateway:
@@ -38,3 +46,23 @@ spring:
                 - Path=/api/reviews/**
               filters:
                 - StripPrefix=2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway,metrics
+
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+
+    gateway:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
+    com.netflix.discovery: INFO
