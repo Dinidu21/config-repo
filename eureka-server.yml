@@ -1,8 +1,10 @@
 eureka:
   instance:
-    hostname: ${HOSTNAME}
+    hostname: ${EUREKA_HOSTNAME}
+    prefer-ip-address: false
+
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-1.eventsphere.internal:8761/eureka/,http://eureka-server-2.eventsphere.internal:8761/eureka/
+      defaultZone: ${EUREKA_PEER_URL}
