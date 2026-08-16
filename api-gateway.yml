@@ -31,7 +31,7 @@ spring:
               predicates:
                 - Path=/api/bookings/**
               filters:
-                - StripPrefix=2
+                - StripPrefix=1
 
             - id: review-notification-service
               uri: lb://review-notification-service
