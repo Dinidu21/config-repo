@@ -19,6 +19,13 @@ spring:
               filters:
                 - StripPrefix=2
 
+            - id: ticket-type-service
+              uri: lb://event-booking-service
+              predicates:
+                - Path=/api/ticket-types/**
+              filters:
+                - StripPrefix=1
+
             - id: user-service
               uri: lb://user-service
               predicates:
