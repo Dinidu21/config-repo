@@ -24,7 +24,7 @@ spring:
               predicates:
                 - Path=/api/events/**
               filters:
-                - StripPrefix=2
+                - StripPrefix=1
 
             - id: booking-service
               uri: lb://event-booking-service
