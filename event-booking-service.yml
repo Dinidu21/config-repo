@@ -23,6 +23,10 @@ spring:
         format_sql: true
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
   client:
     service-url:
       defaultZone: http://eureka-server-1.eventsphere.internal:8761/eureka/,http://eureka-server-2.eventsphere.internal:8761/eureka/
