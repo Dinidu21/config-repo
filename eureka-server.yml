@@ -1,4 +1,11 @@
+server:
+  port: 8761
+
 eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 10000
+
   instance:
     hostname: ${EUREKA_HOSTNAME}
     prefer-ip-address: false
