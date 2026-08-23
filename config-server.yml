@@ -6,14 +6,15 @@ spring:
     config:
       server:
         git:
+          uri: https://github.com/Dinidu21/config-repo.git
           timeout: 10
-          refreshRate: 3600
           cloneOnStart: false
 
 management:
   endpoint:
     health:
-      show-details: always
+      probes:
+        enabled: false
   endpoints:
     web:
       exposure:
