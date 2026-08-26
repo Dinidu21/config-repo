@@ -59,6 +59,15 @@ spring:
           filters:
             - StripPrefix=1
 
+        - id: review-notification-service-multipart
+          uri: lb://review-notification-service
+          order: -1
+          predicates:
+            - Path=/api/reviews
+            - Method=POST
+          filters:
+            - StripPrefix=1
+
         - id: review-notification-service
           uri: lb://review-notification-service
           predicates:
