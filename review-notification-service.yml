@@ -7,8 +7,6 @@ spring:
       project-id: eventsphere-504909
       firestore:
         project-id: eventsphere-504909
-      storage:
-        project-id: eventsphere-504909
 
 app:
   gcs:
