@@ -2,6 +2,13 @@
 
 Centralized Git repository for Spring Cloud Config Server configuration files in the EventSphere microservices platform.
 
+## Student Information
+
+- **Student Name:** Dinidu Sachintha
+- **Student Number:** 241711028
+- **Slack Handle:** [U0BF767MA4S](https://ijse-eca-hdse-71-72.slack.com/team/U0BF767MA4S)
+- **GCP Project ID:** eventsphere-504909
+
 ## Overview
 
 This repository contains all externalized configuration YAML files for the EventSphere backend microservices. The Spring Cloud Config Server reads configuration directly from this repository and serves it to client services at runtime.
